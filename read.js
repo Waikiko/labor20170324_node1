@@ -1,0 +1,16 @@
+const fs = require('fs');
+
+
+fs.readFile('./readme.md', (err, contents) => {
+    if (err){
+        console.error(err.message);
+
+        return;
+
+    }
+
+    console.log(contents.toString('utf-8'));
+
+});
+
+console.log("Auslesen der Datei");
